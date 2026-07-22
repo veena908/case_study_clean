@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-slate-50 text-slate-800;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-1.5 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition-all hover:bg-indigo-500 hover:shadow disabled:opacity-50 disabled:hover:bg-indigo-600 disabled:shadow-none;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-1.5 rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm transition-all hover:border-slate-400 hover:bg-slate-50 disabled:opacity-50;
+  }
+  .btn-danger-outline {
+    @apply inline-flex items-center gap-1.5 rounded-lg border border-red-200 bg-white px-4 py-2 text-sm font-medium text-red-600 shadow-sm transition-all hover:bg-red-50 disabled:opacity-50;
+  }
+  .card {
+    @apply rounded-xl border border-slate-200 bg-white shadow-sm;
+  }
+  .input-field {
+    @apply w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 transition-shadow placeholder:text-slate-400 focus:border-indigo-400 focus:outline-none focus:ring-4 focus:ring-indigo-50;
+  }
+  .select-field {
+    @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 transition-shadow focus:border-indigo-400 focus:outline-none focus:ring-4 focus:ring-indigo-50;
+  }
+}
